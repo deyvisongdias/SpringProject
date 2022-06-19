@@ -13,19 +13,27 @@ import javax.persistence.Table;
 
 public class User {
 
-	@Id//representando que id e a chave estrangeira da tabela
-	@GeneratedValue(strategy = GenerationType.IDENTITY)//id alto incrementavel pelo banco
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
 	private Long id;
 	private String name;
 	private String email;
 	
-	@ManyToOne//muitos para 1, representação dos usuarios pelo diagrama(1*n)
-	@JoinColumn(name="department_id")//nome da chave estrangeira do banco
+	@ManyToOne 
+	@JoinColumn(name = "department_id")
 	Department department;
 	
 	public User() {
 		super();
+	}
+	
+	public User(Long id, String name, String email, Department department) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.department = department;
 	}
 
 	public Long getId() {

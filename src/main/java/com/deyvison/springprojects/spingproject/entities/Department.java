@@ -7,17 +7,23 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tb_deparment")//criando a tabela H2
+@Table(name="tb_department")
 
 public class Department {
 
-	@Id//representando que id e a chave estrangeira da tabela
-	@GeneratedValue(strategy = GenerationType.IDENTITY)//id alto incrementavel pelo banco
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	
 	public Department() {
 		super();
+	}
+	
+	public Department(Long id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
 	}
 
 	public Long getId() {
