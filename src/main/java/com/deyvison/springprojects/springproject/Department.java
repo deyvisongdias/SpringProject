@@ -1,4 +1,4 @@
-package com.deyvison.springprojects.spingproject.entities;
+package com.deyvison.springprojects.springproject;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

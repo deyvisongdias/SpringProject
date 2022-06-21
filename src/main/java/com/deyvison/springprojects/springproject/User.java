@@ -1,4 +1,4 @@
-package com.deyvison.springprojects.spingproject.entities;
+package com.deyvison.springprojects.springproject;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,7 +22,7 @@ public class User {
 	
 	@ManyToOne 
 	@JoinColumn(name = "department_id")
-	Department department;
+	private Department department;
 	
 	public User() {
 		super();
